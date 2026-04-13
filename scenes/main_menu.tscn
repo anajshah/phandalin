@@ -1,0 +1,60 @@
+[gd_scene load_steps=9 format=3 uid="uid://btnayxyrhhe6f"]
+
+[ext_resource type="Texture2D" uid="uid://bbf2oopm482r4" path="res://assets/background.png" id="1_l6cm7"]
+[ext_resource type="Script" uid="uid://cci15djtqfojg" path="res://scenes/enter_button.gd" id="1_rtw2f"]
+[ext_resource type="Texture2D" uid="uid://dgnkdbm3jaoae" path="res://assets/flag-orpheus-top.png" id="2_8ln24"]
+[ext_resource type="Script" uid="uid://cb8hxrtq5yyei" path="res://scenes/faq_button.gd" id="2_oa1go"]
+[ext_resource type="Texture2D" uid="uid://dyvgu4jyf2ql6" path="res://assets/Untitled_Artwork 171.png" id="3_rtw2f"]
+[ext_resource type="Texture2D" uid="uid://buujaja6tx4eq" path="res://assets/Untitled_Artwork 172.png" id="4_oa1go"]
+[ext_resource type="Texture2D" uid="uid://cl4dxqq72tqdf" path="res://assets/Untitled_Artwork 173.png" id="5_tbmy8"]
+[ext_resource type="PackedScene" uid="uid://bdbsto6h2mmr" path="res://scenes/auto_smallleaf.tscn" id="8_tbmy8"]
+
+[node name="main_menu" type="Node2D"]
+
+[node name="enter_button" type="Button" parent="."]
+offset_left = -189.0
+offset_top = 21.0
+offset_right = 197.0
+offset_bottom = 106.0
+script = ExtResource("1_rtw2f")
+
+[node name="faq_button" type="Button" parent="."]
+offset_left = -181.0
+offset_top = 154.0
+offset_right = 196.0
+offset_bottom = 233.0
+script = ExtResource("2_oa1go")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(-13, -2.5)
+scale = Vector2(1, 1.0866051)
+texture = ExtResource("1_l6cm7")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="FlagOrpheusTop" type="Sprite2D" parent="."]
+position = Vector2(-455, -272)
+scale = Vector2(0.33492064, 0.33492064)
+texture = ExtResource("2_8ln24")
+
+[node name="UntitledArtwork171" type="Sprite2D" parent="."]
+position = Vector2(15, -93)
+scale = Vector2(0.5013441, 0.5013441)
+texture = ExtResource("3_rtw2f")
+
+[node name="UntitledArtwork172" type="Sprite2D" parent="."]
+position = Vector2(6.0000005, 71)
+scale = Vector2(0.23924729, 0.2392473)
+texture = ExtResource("4_oa1go")
+
+[node name="UntitledArtwork173" type="Sprite2D" parent="."]
+position = Vector2(9, 200)
+scale = Vector2(0.23588711, 0.23588711)
+texture = ExtResource("5_tbmy8")
+
+[node name="auto_smallleaf" parent="." instance=ExtResource("8_tbmy8")]
+position = Vector2(412.99997, -15)
+scale = Vector2(0.7, 0.7)
+
+[connection signal="pressed" from="enter_button" to="enter_button" method="_on_pressed"]
+[connection signal="pressed" from="faq_button" to="faq_button" method="_on_pressed"]

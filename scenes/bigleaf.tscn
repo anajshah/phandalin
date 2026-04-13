@@ -1,0 +1,44 @@
+[gd_scene load_steps=7 format=3 uid="uid://mgl3sbm81bea"]
+
+[ext_resource type="Script" uid="uid://ngaxjnqxsrad" path="res://bigleaf.gd" id="1_rqfp2"]
+[ext_resource type="Texture2D" uid="uid://tlm4ha7lyx11" path="res://assets/Untitled_Artwork 176.png" id="2_07jug"]
+[ext_resource type="Texture2D" uid="uid://c57bgqtw37oem" path="res://assets/Untitled_Artwork 175.png" id="3_1n8vu"]
+[ext_resource type="Texture2D" uid="uid://bsrsels2setu7" path="res://assets/Untitled_Artwork 174.png" id="4_aff5v"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_b8gbk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_07jug")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_1n8vu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_aff5v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_1n8vu")
+}],
+"loop": true,
+"name": &"default",
+"speed": 7.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cl8i4"]
+size = Vector2(214.25, 430.75)
+
+[node name="bigleaf" type="Area2D"]
+script = ExtResource("1_rqfp2")
+
+[node name="big_leaf" type="AnimatedSprite2D" parent="."]
+position = Vector2(1047, 304)
+scale = Vector2(0.36572266, 0.36572266)
+sprite_frames = SubResource("SpriteFrames_b8gbk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1025.125, 249.625)
+shape = SubResource("RectangleShape2D_cl8i4")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

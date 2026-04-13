@@ -1,0 +1,101 @@
+[gd_scene load_steps=8 format=3 uid="uid://brbxopfjtqf7a"]
+
+[ext_resource type="PackedScene" uid="uid://fd1b0ytdvchd" path="res://scenes/player.tscn" id="1_ioskq"]
+[ext_resource type="Texture2D" uid="uid://bbf2oopm482r4" path="res://assets/background.png" id="1_yjqpq"]
+[ext_resource type="PackedScene" uid="uid://ogvlsvqxqtqe" path="res://canvas_layer.tscn" id="3_4bx60"]
+[ext_resource type="Texture2D" uid="uid://br0qgwxgmh6wn" path="res://assets/ROAD_WORK_AHEAD_W20-1__O_600x.png" id="4_i2l1n"]
+[ext_resource type="Texture2D" uid="uid://b8fccumqshfeh" path="res://assets/Untitled_Artwork 200.png" id="5_wfs7u"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wfs7u"]
+size = Vector2(1387.5, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_es01l"]
+size = Vector2(310, 963)
+
+[node name="intro" type="Node2D"]
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(-19, -14)
+scale = Vector2(5.372263, 8.859122)
+texture = ExtResource("1_yjqpq")
+
+[node name="UntitledArtwork201" type="Sprite2D" parent="."]
+position = Vector2(-2177, 166)
+texture = ExtResource("5_wfs7u")
+
+[node name="UntitledArtwork200" type="Sprite2D" parent="."]
+position = Vector2(54, 108)
+texture = ExtResource("5_wfs7u")
+
+[node name="UntitledArtwork209" type="Sprite2D" parent="."]
+position = Vector2(2172, 1642)
+texture = ExtResource("5_wfs7u")
+
+[node name="UntitledArtwork208" type="Sprite2D" parent="."]
+position = Vector2(-31, 1635)
+texture = ExtResource("5_wfs7u")
+
+[node name="UntitledArtwork207" type="Sprite2D" parent="."]
+position = Vector2(-2212, 1599)
+texture = ExtResource("5_wfs7u")
+
+[node name="UntitledArtwork206" type="Sprite2D" parent="."]
+position = Vector2(-2288, -1306)
+texture = ExtResource("5_wfs7u")
+
+[node name="UntitledArtwork205" type="Sprite2D" parent="."]
+position = Vector2(2207, -1190)
+texture = ExtResource("5_wfs7u")
+
+[node name="UntitledArtwork204" type="Sprite2D" parent="."]
+position = Vector2(-169, -1154)
+texture = ExtResource("5_wfs7u")
+
+[node name="UntitledArtwork203" type="Sprite2D" parent="."]
+position = Vector2(2264, 144)
+texture = ExtResource("5_wfs7u")
+
+[node name="UntitledArtwork202" type="Sprite2D" parent="."]
+position = Vector2(54, 108)
+texture = ExtResource("5_wfs7u")
+
+[node name="player" parent="." instance=ExtResource("1_ioskq")]
+position = Vector2(0, 275)
+
+[node name="Camera2D" type="Camera2D" parent="player"]
+position = Vector2(4, -127)
+position_smoothing_enabled = true
+
+[node name="CanvasLayer" parent="player/Camera2D" instance=ExtResource("3_4bx60")]
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-23, -415)
+shape = SubResource("RectangleShape2D_wfs7u")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-34, 501)
+shape = SubResource("RectangleShape2D_wfs7u")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(810, 44.5)
+shape = SubResource("RectangleShape2D_es01l")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-858, 31)
+shape = SubResource("RectangleShape2D_es01l")
+
+[node name="RoadWorkAheadW201O600x" type="Sprite2D" parent="."]
+position = Vector2(-439.00003, -163)
+scale = Vector2(0.5490018, 0.5490018)
+texture = ExtResource("4_i2l1n")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -282.0
+offset_top = -260.0
+offset_right = 519.0
+offset_bottom = -110.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Sorry Reviewer! This part of the game has not been made yet! 
+I just had finals for my ap tests so I wasn't able to work on my application much. I hope you understand!"

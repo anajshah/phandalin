@@ -1,0 +1,72 @@
+[gd_scene load_steps=8 format=3 uid="uid://55bamyidr7jb"]
+
+[ext_resource type="Script" uid="uid://dnv20a25bohht" path="res://scenes/home_button.gd" id="1_dy8lk"]
+[ext_resource type="Texture2D" uid="uid://bbf2oopm482r4" path="res://assets/background.png" id="1_rs4ch"]
+[ext_resource type="PackedScene" uid="uid://mgl3sbm81bea" path="res://scenes/bigleaf.tscn" id="2_tae7j"]
+[ext_resource type="PackedScene" uid="uid://dspta1mp7cv1p" path="res://scenes/smallleaf.tscn" id="3_tae7j"]
+[ext_resource type="Texture2D" uid="uid://cc3eam6phyuix" path="res://assets/Untitled_Artwork 182.png" id="5_dy8lk"]
+[ext_resource type="FontFile" uid="uid://cqrcgwtfg1ym4" path="res://scenes/BunnySnaps.otf" id="5_sy3bo"]
+[ext_resource type="Texture2D" uid="uid://cp6bcamtdweiv" path="res://assets/Untitled_Artwork 186.png" id="6_uuaxm"]
+
+[node name="faq" type="Node2D"]
+
+[node name="home_button" type="Button" parent="."]
+offset_left = 656.0
+offset_top = 538.0
+offset_right = 828.0
+offset_bottom = 586.0
+script = ExtResource("1_dy8lk")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(604, 309)
+texture = ExtResource("1_rs4ch")
+
+[node name="bigleaf" parent="." instance=ExtResource("2_tae7j")]
+position = Vector2(0, -1)
+
+[node name="smallleaf" parent="." instance=ExtResource("3_tae7j")]
+position = Vector2(855.00006, 273)
+scale = Vector2(0.6, 0.6)
+
+[node name="UntitledArtwork182" type="Sprite2D" parent="."]
+position = Vector2(996.00006, 446)
+scale = Vector2(0.20434569, 0.21118166)
+texture = ExtResource("5_dy8lk")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 52.0
+offset_top = 60.0
+offset_right = 762.0
+offset_bottom = 140.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.94888693, 0.30446392, 0.22743613, 0)
+theme_override_fonts/font = ExtResource("5_sy3bo")
+theme_override_font_sizes/font_size = 80
+text = "Frequently Asked Questions"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 53.0
+offset_top = 143.0
+offset_right = 906.0
+offset_bottom = 570.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_sy3bo")
+theme_override_font_sizes/font_size = 40
+text = "Who can participate?
+ - Anyone between the ages of 13 & 18
+Can I use AI?
+ - Your game can be made with up to 30% AI code
+Can I submit this project to other Hack CLub events?
+ - Only Athena Awards
+How do I start?
+ - Follow the setup guide to get your hackatime and github repo
+up and commit to github every hour!
+"
+
+[node name="UntitledArtwork186" type="Sprite2D" parent="."]
+position = Vector2(741, 554)
+rotation = -0.07268726
+scale = Vector2(0.10499115, 0.08569336)
+texture = ExtResource("6_uuaxm")
+
+[connection signal="pressed" from="home_button" to="home_button" method="_on_pressed"]

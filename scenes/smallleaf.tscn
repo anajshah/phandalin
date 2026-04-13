@@ -1,0 +1,45 @@
+[gd_scene load_steps=7 format=3 uid="uid://dspta1mp7cv1p"]
+
+[ext_resource type="Script" uid="uid://b4xhp02qr1vsd" path="res://smallleaf.gd" id="1_6iwot"]
+[ext_resource type="Texture2D" uid="uid://dvhmh6ks4xoqs" path="res://assets/Untitled_Artwork 177.png" id="2_vme55"]
+[ext_resource type="Texture2D" uid="uid://cq50ghiwuqjur" path="res://assets/Untitled_Artwork 178.png" id="3_j801x"]
+[ext_resource type="Texture2D" uid="uid://x4faq0s404cw" path="res://assets/Untitled_Artwork 179.png" id="4_8ooca"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6atrc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_vme55")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_j801x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_8ooca")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_j801x")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6ey8j"]
+size = Vector2(323, 623)
+
+[node name="smallleaf" type="Area2D"]
+script = ExtResource("1_6iwot")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(163, -248.22449)
+scale = Vector2(0.78091395, 0.78091395)
+sprite_frames = SubResource("SpriteFrames_6atrc")
+frame_progress = 0.37872615
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(56.5, -119.5)
+shape = SubResource("RectangleShape2D_6ey8j")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
