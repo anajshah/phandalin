@@ -1,9 +1,13 @@
-[gd_scene load_steps=8 format=3 uid="uid://brbxopfjtqf7a"]
+[gd_scene load_steps=12 format=3 uid="uid://brbxopfjtqf7a"]
 
 [ext_resource type="PackedScene" uid="uid://fd1b0ytdvchd" path="res://scenes/player.tscn" id="1_ioskq"]
+[ext_resource type="Texture2D" uid="uid://cjrqlnq2ike0s" path="res://assets/Untitled_Artwork 202.png" id="1_t1qkj"]
 [ext_resource type="Texture2D" uid="uid://bbf2oopm482r4" path="res://assets/background.png" id="1_yjqpq"]
 [ext_resource type="PackedScene" uid="uid://ogvlsvqxqtqe" path="res://canvas_layer.tscn" id="3_4bx60"]
+[ext_resource type="Script" uid="uid://cb8hxrtq5yyei" path="res://scenes/faq_button.gd" id="4_272cy"]
+[ext_resource type="Texture2D" uid="uid://c8eaosqpekxqy" path="res://assets/Untitled_Artwork 201.png" id="4_es01l"]
 [ext_resource type="Texture2D" uid="uid://br0qgwxgmh6wn" path="res://assets/ROAD_WORK_AHEAD_W20-1__O_600x.png" id="4_i2l1n"]
+[ext_resource type="Script" uid="uid://dnv20a25bohht" path="res://scenes/home_button.gd" id="5_0naf5"]
 [ext_resource type="Texture2D" uid="uid://b8fccumqshfeh" path="res://assets/Untitled_Artwork 200.png" id="5_wfs7u"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wfs7u"]
@@ -14,48 +18,118 @@ size = Vector2(310, 963)
 
 [node name="intro" type="Node2D"]
 
-[node name="Background" type="Sprite2D" parent="."]
-position = Vector2(-19, -14)
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
+[node name="UntitledArtwork202" type="Sprite2D" parent="CanvasLayer2"]
+position = Vector2(229.99998, 565)
+scale = Vector2(0.08544921, 0.08544921)
+texture = ExtResource("1_t1qkj")
+
+[node name="UntitledArtwork201" type="Sprite2D" parent="CanvasLayer2"]
+z_index = 1
+position = Vector2(112, 565)
+scale = Vector2(0.07373046, 0.07373046)
+texture = ExtResource("4_es01l")
+
+[node name="Button" type="Button" parent="CanvasLayer2"]
+self_modulate = Color(1, 1, 1, 0)
+z_index = -2
+offset_left = 65.0
+offset_top = 524.0
+offset_right = 147.0
+offset_bottom = 605.0
+theme_override_colors/font_color = Color(0.8745098, 0.8745098, 0.8745098, 0)
+theme_override_colors/font_focus_color = Color(0.9490196, 0.9490196, 0.9490196, 0)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 0)
+theme_override_colors/font_hover_color = Color(0.9490196, 0.9490196, 0.9490196, 0)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 0)
+theme_override_colors/font_disabled_color = Color(0.8745098, 0.8745098, 0.8745098, 0)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_focus_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_pressed_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_hover_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_hover_pressed_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_disabled_color = Color(1, 1, 1, 0)
+script = ExtResource("5_0naf5")
+
+[node name="Button2" type="Button" parent="CanvasLayer2"]
+self_modulate = Color(1, 1, 1, 0)
+z_index = -2
+offset_left = 190.0
+offset_top = 522.0
+offset_right = 272.0
+offset_bottom = 603.0
+theme_override_colors/font_color = Color(0.8745098, 0.8745098, 0.8745098, 0)
+theme_override_colors/font_focus_color = Color(0.9490196, 0.9490196, 0.9490196, 0)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 0)
+theme_override_colors/font_hover_color = Color(0.9490196, 0.9490196, 0.9490196, 0)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 0)
+theme_override_colors/font_disabled_color = Color(0.8745098, 0.8745098, 0.8745098, 0)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_focus_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_pressed_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_hover_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_hover_pressed_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_disabled_color = Color(1, 1, 1, 0)
+script = ExtResource("4_272cy")
+
+[node name="Background" type="Node" parent="."]
+
+[node name="Background" type="Sprite2D" parent="Background"]
+z_index = -1
+position = Vector2(-105, -240)
 scale = Vector2(5.372263, 8.859122)
 texture = ExtResource("1_yjqpq")
 
-[node name="UntitledArtwork201" type="Sprite2D" parent="."]
+[node name="UntitledArtwork201" type="Sprite2D" parent="Background"]
+z_index = -1
 position = Vector2(-2177, 166)
 texture = ExtResource("5_wfs7u")
 
-[node name="UntitledArtwork200" type="Sprite2D" parent="."]
+[node name="UntitledArtwork200" type="Sprite2D" parent="Background"]
+z_index = -1
 position = Vector2(54, 108)
 texture = ExtResource("5_wfs7u")
 
-[node name="UntitledArtwork209" type="Sprite2D" parent="."]
+[node name="UntitledArtwork209" type="Sprite2D" parent="Background"]
+z_index = -1
 position = Vector2(2172, 1642)
 texture = ExtResource("5_wfs7u")
 
-[node name="UntitledArtwork208" type="Sprite2D" parent="."]
+[node name="UntitledArtwork208" type="Sprite2D" parent="Background"]
+z_index = -1
 position = Vector2(-31, 1635)
 texture = ExtResource("5_wfs7u")
 
-[node name="UntitledArtwork207" type="Sprite2D" parent="."]
+[node name="UntitledArtwork207" type="Sprite2D" parent="Background"]
+z_index = -1
 position = Vector2(-2212, 1599)
 texture = ExtResource("5_wfs7u")
 
-[node name="UntitledArtwork206" type="Sprite2D" parent="."]
+[node name="UntitledArtwork206" type="Sprite2D" parent="Background"]
+z_index = -1
 position = Vector2(-2288, -1306)
 texture = ExtResource("5_wfs7u")
 
-[node name="UntitledArtwork205" type="Sprite2D" parent="."]
+[node name="UntitledArtwork205" type="Sprite2D" parent="Background"]
+z_index = -1
 position = Vector2(2207, -1190)
 texture = ExtResource("5_wfs7u")
 
-[node name="UntitledArtwork204" type="Sprite2D" parent="."]
+[node name="UntitledArtwork204" type="Sprite2D" parent="Background"]
+z_index = -1
 position = Vector2(-169, -1154)
 texture = ExtResource("5_wfs7u")
 
-[node name="UntitledArtwork203" type="Sprite2D" parent="."]
+[node name="UntitledArtwork203" type="Sprite2D" parent="Background"]
+z_index = -1
 position = Vector2(2264, 144)
 texture = ExtResource("5_wfs7u")
 
-[node name="UntitledArtwork202" type="Sprite2D" parent="."]
+[node name="UntitledArtwork202" type="Sprite2D" parent="Background"]
+z_index = -1
 position = Vector2(54, 108)
 texture = ExtResource("5_wfs7u")
 
@@ -99,3 +173,7 @@ offset_bottom = -110.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Sorry Reviewer! This part of the game has not been made yet! 
 I just had finals for my ap tests so I wasn't able to work on my application much. I hope you understand!"
+
+[connection signal="pressed" from="CanvasLayer2/Button" to="player" method="_on_button_pressed"]
+[connection signal="pressed" from="CanvasLayer2/Button" to="CanvasLayer2/Button" method="_on_pressed"]
+[connection signal="pressed" from="CanvasLayer2/Button2" to="CanvasLayer2/Button2" method="_on_pressed"]

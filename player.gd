@@ -22,3 +22,7 @@ func _physics_process(_delta: float) -> void:
 		_animated_sprite.play("idle")
 
 	move_and_slide()
+
+
+func _on_button_pressed() -> void:
+	pass # Replace with function body.

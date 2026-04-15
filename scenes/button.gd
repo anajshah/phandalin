@@ -11,5 +11,4 @@ func _process(delta: float) -> void:
 	pass
 
 func _on_pressed() -> void:
-	print("home button being pressed")
 	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
