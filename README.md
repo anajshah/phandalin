@@ -8,7 +8,7 @@ Play the project here: https://anajshah.itch.io/phandalin
 
 ## Screenshots
 
-![Logo](Untitled_Artwork 171.png)
+![Logo](assets/Untitled_Artwork_171.png)
 
 ## Resources used
 
@@ -22,3 +22,7 @@ I'm not the best at webdev so I ended up using Godot to make the platform. It is
 ## Tech Stack
 
 Godot Engine and GDScript
+
+## Contribute?
+
+Clone the repository and try adding to the player's world! You might have to learn how to use godot...
