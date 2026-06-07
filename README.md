@@ -8,7 +8,7 @@ Play the project here: https://anajshah.itch.io/phandalin
 
 ## Screenshots
 
-![Main Scene](screenshots/main-scene.png)
+![Logo](Untitled_Artwork 171.png)
 
 ## Resources used
 
